@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 
-const Header = () => {
+const Header = ({lang, setLang}) => {
   return (
     <header className="border-b border-gray-600">
       <div className="flex flex-col mx-auto w-full max-w-2xl px-4">
@@ -15,9 +15,12 @@ const Header = () => {
           </ul>
           <Link to="/"><h1>título</h1></Link>
 
-        <div className="flex gap-3 *:font-mono *:text-xs">
-            <Link to="/">PT-BR</Link>
-            <Link to="/">EN</Link>
+        <div className="flex gap-3 *:font-mono *:text-xs *:cursor-pointer">
+            <button
+            onClick={() => setLang("pt-br")}
+            className="">PT-BR</button>
+            <button
+            onClick={() => setLang("en")}>EN</button>
         </div>
 
         </div>
