@@ -1,6 +1,9 @@
 import { Link } from "react-router";
+import { usarAlterarIdioma } from "../contexts/LanguageContext";
 
-const Header = ({lang, setLang}) => {
+const Header = () => {
+  const { lang, setLang } = usarAlterarIdioma();
+
   return (
     <header className="border-b border-gray-600">
       <div className="flex flex-col mx-auto w-full max-w-2xl px-4">
@@ -16,11 +19,14 @@ const Header = ({lang, setLang}) => {
           <Link to="/"><h1>título</h1></Link>
 
         <div className="flex gap-3 *:font-mono *:text-xs *:cursor-pointer">
-            <button
-            onClick={() => setLang("pt-br")}
-            className="">PT-BR</button>
-            <button
-            onClick={() => setLang("en")}>EN</button>
+          <button onClick={() => {
+            console.log("Clicou no PT-BR")
+            setLang("pt-br")
+            }}>PT-BR</button>
+          <button onClick={() => {
+            console.log("Clicou no EN")
+            setLang("en")
+            }}>EN</button>
         </div>
 
         </div>

@@ -4,12 +4,10 @@ import Footer from "../components/Footer";
 import { useState } from "react";
 
 const PageLayout = () => {
-    const [lang, setLang] = useState("pt-br")
-
     return ( 
         <>
-            <Header lang={lang} setLang={setLang} />
-            <Outlet context={{ lang, setLang }} />
+            <Header />
+            <Outlet />
             <Footer />
         </>
      );
