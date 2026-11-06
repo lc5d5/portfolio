@@ -21,11 +21,14 @@ const Home = () => {
                                     <p className="mb-7">Tenho trabalhado há mais de um ano como freelancer,</p>
                                     <p></p>
                                     <Footer />
-                                
-                                )
-                        } : (
+                            </>
+                        ) : (
                             <>
+                                <p className="text-[12px]">// bem-vindo</p>
+                                <p>Oi! Me chamo Lucas, sou desenvolvedor full-stack (frontend-leaning) com um olhar aguçado pra design, que gosta de na construção.</p>
+                                <p className="mb-7">Tenho trabalhado há mais de um ano como freelancer,</p>
                                 <p></p>
+                                <Footer />
                             </>
                         )
                     </div>   
