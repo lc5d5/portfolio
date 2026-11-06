@@ -1,8 +1,9 @@
 import { LuArrowUpRight } from "react-icons/lu";
-import { usarAlterarIdioma } from "../contexts/LanguageContext";
+import { useContext } from "react";
+import { LanguageContext } from "../contexts/LanguageContext";
 
 const Footer = () => {
-  const { lang } = usarAlterarIdioma();
+    const { lang, setLang } = useContext(LanguageContext);
 
   return (
     <footer className="border-t border-gray-600 *:font-mono *:text-xs">
@@ -12,7 +13,14 @@ const Footer = () => {
             lang === "pt-br" ? (
               <>
                 <span>Contato</span>
-                  <ul className="flex *:flex gap-3">
+              </>
+            ) : (
+            <>
+              <span>Socials</span>
+            </>)
+          }
+          
+          <ul className="flex *:flex gap-3">
                     <li>
                     <a href="" className="flex">Github <LuArrowUpRight className="text-amber-700"/></a>
                     </li>
@@ -20,9 +28,6 @@ const Footer = () => {
                     <a href="">LinkedIn</a>
                     </li>
                   </ul>
-              </>
-            ) : (<><p>hi where am i</p></>)
-          }
         </div>
       </div>
     </footer>
