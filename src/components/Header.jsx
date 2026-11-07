@@ -7,17 +7,15 @@ const Header = () => {
   const { lang, setLang } = useContext(LanguageContext);
 
   return (
-    <header className="border-b border-gray-600">
-      <div className="flex flex-col mx-auto w-full max-w-2xl px-4">
-        <div className="flex justify-between items-center min-h-17">
+    <header className="bg-black border-b border-soviet-red">
+      <div className="flex flex-col mx-auto w-full max-w-4xl px-4">
+        <div className="flex justify-between items-center min-h-17 text-soviet-beige">
           {lang === "pt-br" ? (
             <>
-              <ul className="flex gap-3 *:font-mono *:text-xs">
-                <li>
+              <ul className="flex gap-3 *:font-mono *:text-xs *:relative *:m-6">
+                <li className="group w-max">
                   <Link to="/projetos">Projetos</Link>
-                </li>
-                <li>
-                  <Link to="./teste.pdf">Currículo</Link>
+                  <span class="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-soviet-red group-hover:w-full"></span>
                 </li>
               </ul>
             </>
@@ -34,7 +32,9 @@ const Header = () => {
             </>
           )}
 
-          <Link to="/">
+          <Link 
+          to="/"
+          className="">
             <Titulo />
           </Link>
 

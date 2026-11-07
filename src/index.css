@@ -5,6 +5,9 @@
 @theme {
   --font-heading: "Inter", sans-serif;
   --font-mono: "DM Mono", monospace;
+  --color-soviet-red: #a1281c;
+  --color-soviet-grey: #92938d;
+  --color-soviet-beige: #e8d6c0;
 }
 
 @layer base {
