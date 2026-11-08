@@ -2,6 +2,8 @@ import { Link } from "react-router";
 import { useContext } from "react";
 import { LanguageContext } from "../contexts/LanguageContext";
 import Titulo from "./Titulo";
+import HoverAnimado from "./HoverAnimado";
+import ButtonAnimado from "./ButtonAnimado";
 
 const Header = () => {
   const { lang, setLang } = useContext(LanguageContext);
@@ -13,21 +15,15 @@ const Header = () => {
           {lang === "pt-br" ? (
             <>
               <ul className="flex gap-3 *:font-mono *:text-xs *:relative *:m-6">
-                <li className="group w-max">
-                  <Link to="/projetos">Projetos</Link>
-                  <span class="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-soviet-red group-hover:w-full"></span>
-                </li>
+                <HoverAnimado to="/projetos">Projetos</HoverAnimado>
+                <HoverAnimado to="/teste.pdf">Currículo</HoverAnimado>
               </ul>
             </>
           ) : (
             <>
               <ul className="flex gap-3 *:font-mono *:text-xs">
-                <li>
-                  <Link to="/projetos">Projects</Link>
-                </li>
-                <li>
-                  <Link to="./teste.pdf">Resume</Link>
-                </li>
+                <HoverAnimado to="/projetos">Projects</HoverAnimado>
+                <HoverAnimado to="/teste.pdf">Resume</HoverAnimado>
               </ul>
             </>
           )}
@@ -39,22 +35,18 @@ const Header = () => {
           </Link>
 
           <div className="flex gap-3 *:font-mono *:text-xs *:cursor-pointer">
-            <button
-              onClick={() => {
-                console.log("Clicou no PT-BR");
+            <ButtonAnimado onClick={() => {
                 setLang("pt-br");
               }}
             >
               PT-BR
-            </button>
-            <button
-              onClick={() => {
-                console.log("Clicou no EN");
+            </ButtonAnimado>
+            <ButtonAnimado onClick={() => {
                 setLang("en");
               }}
             >
               EN
-            </button>
+            </ButtonAnimado>
           </div>
         </div>
       </div>
