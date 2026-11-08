@@ -44,7 +44,6 @@ const Home = () => {
                 </>
               ) : (
                 <>
-                  <p className="text-[12px]">// welcome</p>
                   <p>
                     Hello! I'm Lucas, sou desenvolvedor full-stack
                     (frontend-leaning) com um olhar aguçado pra design, que
