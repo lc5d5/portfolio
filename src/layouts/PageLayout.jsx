@@ -8,7 +8,7 @@ const PageLayout = () => {
             <Header />
             <Outlet />
             <Footer
-            className="max-w-4xl px-9" />
+            className="max-w-4xl px-9 h-screen" />
         </>
      );
 }
