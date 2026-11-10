@@ -29,7 +29,7 @@ const Projetos = () => {
   return (
     <main className="bg-black pt-20">
       <div className="flex flex-col mx-auto w-full max-w-4xl px-4">
-        <div className="flex flex-col min-h-17 px-5">
+        <div className="flex flex-col min-h-17 pl-5">
           <h3 className="text-soviet-red text-xs">Experiência</h3>
           <h1 className="font-bold text-[48px] text-white">Projetos</h1>
 
